@@ -22,16 +22,17 @@ const handleLoadData = async (categoryId) => {
     const emptyPage = document.getElementById('empty-page');
 
     cardContainer.innerHTML = " ";
+    emptyPage.innerHTML = " ";
 
     if (data.data.length === 0) {
         const div = document.createElement('div');
         div.innerHTML = `
-            <div class="">
-                <img class="ml-[27%]" src="images/Icon.png" alt="">
-                <p class="font-bold text-4xl mt-7 text-center">Oops!! Sorry, There is no content here</p>
+            <div class="mt-12">
+                <img class="ml-[45%]" src="images/Icon.png" alt="">
+                <p class="font-bold text-4xl mt-7 text-center">Oops!! Sorry, There is no <br> content here</p>
             </div>
         `;
-        cardContainer.appendChild(div);
+        emptyPage.appendChild(div);
     }
     else {
         data.data.forEach((videos) => {
@@ -47,10 +48,25 @@ const handleLoadData = async (categoryId) => {
             //     console.log(object.others.views);
             // })
 
+            const hours = Math.floor(videos.others.posted_date / 3600);
+            const minutes = Math.floor((videos.others.posted_date % 3600) / 60)
+            const seconds = videos.others.posted_date % 60;
+
+            const timeString = `${hours ? `${hours} hour${hours !== 1 ? 's' : ''}, ` : ''}${minutes ? `${minutes} minute${minutes !== 1 ? 's' : ''}, ` : ''}${seconds} second${seconds !== 1 ? ' ' : ''}`;
+
+            
+
             const div = document.createElement('div');
             div.innerHTML = `
                 <div class="card bg-base-100 shadow-xl">
-                <figure><img class="h-[200px]" src=${videos.thumbnail} /></figure>
+                <figure>
+                    <img class="h-[200px]" src=${videos.thumbnail} />
+                    
+                </figure>
+                <div class="text-right -mt-8 mr-6">
+                    <span class="bg-[#171717] text-white py-1 px-[5px] rounded">${timeString}</span>
+                </div>
+                
                     <div class="card-body">
                         <h2 class="card-title">
                             <img class="h-[50px] rounded-full" src=${videos.authors[0].profile_picture} />
@@ -70,7 +86,6 @@ const handleLoadData = async (categoryId) => {
         });
     }
 
-    console.log();
 
 
 
