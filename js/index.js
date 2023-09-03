@@ -54,7 +54,7 @@ const handleLoadData = async (categoryId) => {
 
             const timeString = `${hours ? `${hours} hour${hours !== 1 ? 's' : ''}, ` : ''}${minutes ? `${minutes} minute${minutes !== 1 ? 's' : ''}, ` : ''}${seconds} second${seconds !== 1 ? ' ' : ''}`;
 
-            
+
 
             const div = document.createElement('div');
             div.innerHTML = `
@@ -87,9 +87,12 @@ const handleLoadData = async (categoryId) => {
     }
 
 
-
-
 };
+
+// this code is for blog
+const blogPost = () => {
+    window.location.href = 'blog.html';
+}
 
 handleCategory();
 handleLoadData("1000");
