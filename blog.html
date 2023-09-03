@@ -18,13 +18,13 @@
             </div>
         </section>
         <section class="mt-8">
-            <article class="mb-6">
+            <article class="mb-6 p-4">
                 <h1 class="text-3xl font-bold mb-6">Var</h1>
                 <p>
                     var keyword is used to declare variables since JavaScript was created. It is confusing and error-prone when using variables declared using var.
                 </p>
             </article>
-            <article>
+            <article class="p-4">
                 <h1 class="text-3xl font-bold">Javascript var, let and const variables</h1>
                 <p class="text-2xl font-medium mb-6">Block scope</p>
                 <p>If you come from a different programming language than Javascript, the following behavior may be
@@ -46,7 +46,7 @@
                     complexity.
                 </p>
             </article>
-            <article class="mt-8">
+            <article class="mt-8 p-4">
                 <h1 class="text-3xl font-bold mb-6">Let</h1>
                 <p>
                     In ES6 in addition to var, there were two new variable types introduced - let and const. What are
@@ -79,7 +79,7 @@
                     using var on the root level, it is automatically declared on the global object:
                 </p>
             </article>
-            <article class="mt-8">
+            <article class="mt-8 p-4">
                 <h1 class="text-3xl font-bold mb-6">Const</h1>
                 <p>
                     Const behaves in a very similar way to let. It is also block scoped and cannot be used until
@@ -97,7 +97,7 @@
                     numbers, strings or booleans, you are safe as they are immutable.
                 </p>
             </article>
-            <article class="mt-8">
+            <article class="mt-8 p-4">
                 <h1 class="text-3xl font-bold mb-6">Let Vs Const</h1>
                 <p>
                     Because of the advantages of const described above, it is a good practice to prefer const over let. Actually, in most of the cases, you can safely use const. There are only a few cases where you really need let. One of the examples can be loops. Because the iterating variable gets changed with every step through the loop you cannot use const. However, you can avoid using loops in many cases in favor of more functional way such as - map, filter or reduce. When using a linter (and you should use it), it can check for you cases where you can safely replace let with const as the variable is never reassigned.
