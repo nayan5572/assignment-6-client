@@ -30,10 +30,10 @@
                     <img src="images/Logo.png" alt="">
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li class="py-[10px] px-[20px] bg-[#25252533] rounded"><a
-                                class="font-medium text-[#252525] text-[18px]">Sort by view</a></li>
-                    </ul>
+                    <!-- <ul class="menu menu-horizontal px-1">
+                        <li onclick="shortData()"><a class="font-medium text-[#252525] text-[18px] py-[10px] px-[20px] bg-[#25252533] rounded">Sort by view</a></li>
+                    </ul> -->
+                    <button onclick="shortData('1000')"><a class="font-medium text-[#252525] text-[18px] py-[10px] px-[20px] bg-[#25252533] rounded">Sort by view</a></button>
                 </div>
                 <div class="navbar-end">
                     <a class="btn bg-[#FF1F3D] text-white p-[10px] rounded">Blog</a>
@@ -49,6 +49,9 @@
             </div>
         </div>
         <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto pt-12">
+
+        </div>
+        <div id="empty-page" class="ml-[22%] mt-[22%]">
             
         </div>
     </main>
