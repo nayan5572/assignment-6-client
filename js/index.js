@@ -46,13 +46,13 @@ const handleLoadData = async (categoryId) => {
 
             // sortedData.forEach(object => {
             //     console.log(object.others.views);
-            // })
+            // });
 
             const hours = Math.floor(videos.others.posted_date / 3600);
-            const minutes = Math.floor((videos.others.posted_date % 3600) / 60)
+            const minutes = Math.floor((videos.others.posted_date % 3600) / 60);
             const seconds = videos.others.posted_date % 60;
 
-            const timeString = `${hours ? `${hours} hour${hours !== 1 ? 's' : ''}, ` : ''}${minutes ? `${minutes} minute${minutes !== 1 ? 's' : ''}, ` : ''}${seconds} second${seconds !== 1 ? ' ' : ''}`;
+            const timeString = `${hours ? `${hours} hour${hours !== 1 ? 's' : ''}, ` : ''}${minutes ? `${minutes} minute${minutes !== 1 ? 's' : ''}, ` : ''}${seconds} seconds${seconds !== 1 ? ' ' : ''}`;
 
 
 
